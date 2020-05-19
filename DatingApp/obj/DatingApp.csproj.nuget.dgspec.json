@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\Code\\Angular\\DatingApp\\DatingApp\\DatingApp.csproj": {}
+    "D:\\Dev\\Code\\Angular\\DatingApp\\DAtingApp\\DatingApp.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\Code\\Angular\\DatingApp\\DatingApp\\DatingApp.csproj": {
+    "D:\\Dev\\Code\\Angular\\DatingApp\\DAtingApp\\DatingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Code\\Angular\\DatingApp\\DatingApp\\DatingApp.csproj",
+        "projectUniqueName": "D:\\Dev\\Code\\Angular\\DatingApp\\DAtingApp\\DatingApp.csproj",
         "projectName": "DatingApp",
-        "projectPath": "D:\\Dev\\Code\\Angular\\DatingApp\\DatingApp\\DatingApp.csproj",
+        "projectPath": "D:\\Dev\\Code\\Angular\\DatingApp\\DAtingApp\\DatingApp.csproj",
         "packagesPath": "C:\\Users\\Admin QC\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Code\\Angular\\DatingApp\\DatingApp\\obj\\",
+        "outputPath": "D:\\Dev\\Code\\Angular\\DatingApp\\DAtingApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -44,6 +44,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.10.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
