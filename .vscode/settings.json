@@ -3,6 +3,7 @@
     "codelyzer",
     "devkit",
     "jasminewd",
+    "minlength",
     "tabset",
     "tslib"
   ]
