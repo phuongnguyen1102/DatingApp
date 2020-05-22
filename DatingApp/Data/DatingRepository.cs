@@ -104,6 +104,8 @@ namespace DatingApp.Data {
       var messages = _context.Messages
         .Include (u => u.Sender)
         .ThenInclude (p => p.Photos)
+        .Include (u => u.Recipient)
+        .ThenInclude (p => p.Photos)
         .AsQueryable ();
 
       switch (messageParams.MessageContainer) {
@@ -126,12 +128,12 @@ namespace DatingApp.Data {
       var messages = await _context.Messages
         .Include (u => u.Sender).ThenInclude (p => p.Photos)
         .Include (u => u.Recipient).ThenInclude (p => p.Photos)
-        .Where (m => m.RecipientId == userId 
-          && m.RecipientDeleted == false 
-          && m.SenderId == recipientId 
-          || m.RecipientId == recipientId 
-          && m.SenderId == userId 
-          && m.SenderDeleted == false)
+        .Where (m => m.RecipientId == userId &&
+          m.RecipientDeleted == false &&
+          m.SenderId == recipientId ||
+          m.RecipientId == recipientId &&
+          m.SenderId == userId &&
+          m.SenderDeleted == false)
         .OrderByDescending (m => m.MessageSent)
         .ToListAsync ();
 
