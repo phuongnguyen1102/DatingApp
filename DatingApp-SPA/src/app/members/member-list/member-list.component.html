@@ -55,33 +55,35 @@
   </form>
   <br />
 
-  <div class="col">
-    <div class="btn-group float-right">
-      <button
-        type="button"
-        name="orderBy"
-        class="btn btn-primary"
-        btnRadio="lastActive"
-        [(ngModel)]="userParams.orderBy"
-        (click)="loadUsers()"
-      >
-        Last Active
-      </button>
-      <button
-        type="button"
-        name="orderBy"
-        class="btn btn-primary"
-        btnRadio="created"
-        [(ngModel)]="userParams.orderBy"
-        (click)="loadUsers()"
-      >
-        Newest Members
-      </button>
+  <div class="container mt-3">
+    <div class="col">
+      <div class="btn-group">
+        <button
+          type="button"
+          name="orderBy"
+          class="btn btn-primary"
+          btnRadio="lastActive"
+          [(ngModel)]="userParams.orderBy"
+          (click)="loadUsers()"
+        >
+          Last Active
+        </button>
+        <button
+          type="button"
+          name="orderBy"
+          class="btn btn-primary"
+          btnRadio="created"
+          [(ngModel)]="userParams.orderBy"
+          (click)="loadUsers()"
+        >
+          Newest Members
+        </button>
+      </div>
     </div>
   </div>
-
+  <br />
   <div class="row">
-    <div *ngFor="let user of users" class="col-lg-2 col-md-3 col-sm-6">
+    <div *ngFor="let user of users" class="col-sm-6 col-md-4 col-lg-4 col-xl-2">
       <app-member-card [user]="user"></app-member-card>
     </div>
   </div>
