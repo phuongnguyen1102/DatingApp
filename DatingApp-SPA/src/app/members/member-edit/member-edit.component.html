@@ -15,7 +15,7 @@
       <div class="card">
         <img
           class="card-img-top img-thumbnail"
-          src="{{ user.photoUrl }}"
+          src="{{ photoUrl || '../../../assets/user.png'}}"
           alt="{{ user.knownAs }}"
         />
         <div class="card-body">
@@ -29,11 +29,11 @@
           </div>
           <div>
             <strong>Last Active:</strong>
-            <p>{{ user.lastActive }}</p>
+            <p>{{ user.lastActive | dateAgo}}</p>
           </div>
           <div>
             <strong>Member Since:</strong>
-            <p>{{ user.created }}</p>
+            <p>{{ user.created | date: 'mediumDate'}}</p>
           </div>
         </div>
         <div class="card-footer">
@@ -55,7 +55,7 @@
               <h4>Description</h4>
               <textarea
                 class="form-control"
-                name="introduction"
+                name="introductions"
                 rows="6"
                 [(ngModel)]="user.introductions"
               ></textarea>
@@ -69,7 +69,7 @@
               <h4>Interests</h4>
               <textarea
                 class="form-control"
-                name="interests"
+                name="interest"
                 rows="6"
                 [(ngModel)]="user.interest"
               ></textarea>
@@ -93,7 +93,7 @@
             </form>
           </tab>
           <tab heading="Edit Photos">
-            <p>Photo edit will go here</p>
+            <app-photo-editor [photos]="user.photos" (getMemberPhotoChange)="updateMainPhoto($event)"></app-photo-editor>
           </tab>
         </tabset>
       </div>

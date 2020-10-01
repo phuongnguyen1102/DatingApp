@@ -71,3 +71,4 @@ D:\Dev\Code\Angular\DatingApp\DatingApp\bin\Debug\netcoreapp3.1\AutoMapper.Exten
 D:\Dev\Code\Angular\DatingApp\DatingApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\Dev\Code\Angular\DatingApp\DatingApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Dev\Code\Angular\DatingApp\DatingApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Dev\Code\Angular\DatingApp\DatingApp\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
